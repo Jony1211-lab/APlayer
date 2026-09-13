@@ -54,6 +54,9 @@
                 <button type="button" class="aplayer-icon aplayer-icon-menu">
                     {{@ icons.menu }}
                 </button>
+                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="Playlist">
+                    {{@ icons.playlist }}
+                </button>
                 <button type="button" class="aplayer-icon aplayer-icon-lrc">
                     {{@ icons.lrc }}
                 </button>
@@ -129,6 +132,9 @@
                 </button>
                 <button type="button" class="aplayer-icon aplayer-icon-menu">
                     {{@ icons.menu }}
+                </button>
+                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="Playlist">
+                    {{@ icons.playlist }}
                 </button>
                 <button type="button" class="aplayer-icon aplayer-icon-lrc">
                     {{@ icons.lrc }}

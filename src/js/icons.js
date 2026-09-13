@@ -6,6 +6,7 @@ import volumeOff from '../assets/volume-off.svg';
 import orderRandom from '../assets/order-random.svg';
 import orderList from '../assets/order-list.svg';
 import menu from '../assets/menu.svg';
+import playlist from '../assets/playlist.svg';
 import loopAll from '../assets/loop-all.svg';
 import loopOne from '../assets/loop-one.svg';
 import loopNone from '../assets/loop-none.svg';
@@ -23,6 +24,7 @@ const Icons = {
     orderRandom: orderRandom,
     orderList: orderList,
     menu: menu,
+    playlist: playlist,
     loopAll: loopAll,
     loopOne: loopOne,
     loopNone: loopNone,

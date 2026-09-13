@@ -10,6 +10,7 @@ class Controller {
         this.initOrderButton();
         this.initLoopButton();
         this.initMenuButton();
+        this.initPlaylistButton();
         if (!utils.isMobile) {
             this.initVolumeButton();
         }
@@ -127,6 +128,12 @@ class Controller {
     initMenuButton() {
         this.player.template.menu.addEventListener('click', () => {
             this.player.list.toggle();
+        });
+    }
+
+    initPlaylistButton() {
+        this.player.template.playlistButton.addEventListener('click', (e) => {
+            window.dispatchEvent(new CustomEvent('aplayer:playlist-menu', { detail: { button: e.currentTarget } }));
         });
     }
 

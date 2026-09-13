@@ -56,6 +56,7 @@ class Template {
         this.skipForwardButton = this.container.querySelector('.aplayer-icon-forward');
         this.skipPlayButton = this.container.querySelector('.aplayer-icon-play');
         this.lrcButton = this.container.querySelector('.aplayer-icon-lrc');
+        this.playlistButton = this.container.querySelector('.aplayer-playlist-icon');
     }
 }
 
