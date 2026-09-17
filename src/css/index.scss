@@ -153,6 +153,7 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
         .aplayer-icon-back,
         .aplayer-icon-play,
         .aplayer-icon-forward,
+        .aplayer-playlist-icon,
         .aplayer-icon-lrc {
             display: inline-block;
         }
@@ -160,7 +161,8 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
         .aplayer-icon-back,
         .aplayer-icon-play,
         .aplayer-icon-forward,
-        .aplayer-icon-menu {
+        .aplayer-icon-menu,
+        .aplayer-playlist-icon {
             position: absolute;
             bottom: 27px;
             width: 20px;
@@ -168,18 +170,22 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
         }
 
         .aplayer-icon-back {
-            right: 75px;
+            right: 100px;
         }
 
         .aplayer-icon-play {
-            right: 50px;
+            right: 75px;
         }
 
         .aplayer-icon-forward {
-            right: 25px;
+            right: 50px;
         }
 
         .aplayer-icon-menu {
+            right: 25px;
+        }
+
+        .aplayer-playlist-icon {
             right: 0;
         }
     }
@@ -224,6 +230,11 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
         font-size: 12px;
         margin: 0;
         display: inline-block;
+
+        &:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
+        }
 
         path {
             transition: all .2s ease-in-out;
@@ -413,7 +424,7 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
 
                 .aplayer-icon {
                     cursor: pointer;
-                    transition: all 0.2s ease;
+                    transition: opacity 0.16s ease;
 
                     path {
                         fill: #666;
@@ -424,12 +435,15 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
                     }
 
                     &:hover {
+                        opacity: 1;
+
                         path {
                             fill: #000;
                         }
                     }
 
-                    &.aplayer-icon-menu {
+                    &.aplayer-icon-menu,
+                    &.aplayer-playlist-icon {
                         display: none;
                     }
                 }
@@ -439,7 +453,8 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
                         display: none;
                     }
 
-                    .aplayer-icon-menu {
+                    .aplayer-icon-menu,
+                    .aplayer-playlist-icon {
                         display: none;
                     }
                 }
@@ -572,7 +587,7 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
 
     .aplayer-list {
         overflow: auto;
-        transition: all 0.5s ease;
+        transition: height 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
         will-change: height;
         display: none;
         overflow: hidden;
@@ -702,5 +717,11 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
     }
     100% {
         transform: rotate(360deg)
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .aplayer .aplayer-list {
+        transition: none;
     }
 }

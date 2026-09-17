@@ -41,7 +41,7 @@ class Template {
         this.thumb = this.container.querySelector('.aplayer-thumb');
         this.volume = this.container.querySelector('.aplayer-volume');
         this.volumeBar = this.container.querySelector('.aplayer-volume-bar');
-        this.volumeButton = this.container.querySelector('.aplayer-time button');
+        this.volumeButton = this.container.querySelector('.aplayer-icon-volume-down');
         this.volumeBarWrap = this.container.querySelector('.aplayer-volume-bar-wrap');
         this.loop = this.container.querySelector('.aplayer-icon-loop');
         this.order = this.container.querySelector('.aplayer-icon-order');

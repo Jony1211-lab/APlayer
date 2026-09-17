@@ -26,15 +26,15 @@
                 <span class="aplayer-time-inner">
                     <span class="aplayer-ptime">00:00</span> / <span class="aplayer-dtime">00:00</span>
                 </span>
-                <span class="aplayer-icon aplayer-icon-back">
+                <button type="button" class="aplayer-icon aplayer-icon-back" title="Previous" aria-label="Previous">
                     {{@ icons.skip }}
-                </span>
-                <span class="aplayer-icon aplayer-icon-play">
+                </button>
+                <button type="button" class="aplayer-icon aplayer-icon-play" title="Play or pause" aria-label="Play or pause">
                     {{@ icons.play }}
-                </span>
-                <span class="aplayer-icon aplayer-icon-forward">
+                </button>
+                <button type="button" class="aplayer-icon aplayer-icon-forward" title="Next" aria-label="Next">
                     {{@ icons.skip }}
-                </span>
+                </button>
                 <div class="aplayer-volume-wrap">
                     <button type="button" class="aplayer-icon aplayer-icon-volume-down">
                         {{@ icons.volumeDown }}
@@ -51,10 +51,10 @@
                 <button type="button" class="aplayer-icon aplayer-icon-loop">
                     {{ if options.loop === 'one' }}{{@ icons.loopOne }}{{ else if options.loop === 'all' }}{{@ icons.loopAll }}{{ else if options.loop === 'none' }}{{@ icons.loopNone }}{{ /if }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-icon-menu">
+                <button type="button" class="aplayer-icon aplayer-icon-menu" title="Tracks" aria-label="Tracks" aria-haspopup="true" aria-expanded="{{ if options.listFolded }}false{{ else }}true{{ /if }}">
                     {{@ icons.menu }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="Playlist">
+                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="Playlists" aria-label="Playlists" aria-haspopup="menu" aria-expanded="false">
                     {{@ icons.playlist }}
                 </button>
                 <button type="button" class="aplayer-icon aplayer-icon-lrc">
@@ -105,15 +105,15 @@
                 <span class="aplayer-time-inner">
                     <span class="aplayer-ptime">00:00</span> / <span class="aplayer-dtime">00:00</span>
                 </span>
-                <span class="aplayer-icon aplayer-icon-back">
+                <button type="button" class="aplayer-icon aplayer-icon-back" title="Previous" aria-label="Previous">
                     {{@ icons.skip }}
-                </span>
-                <span class="aplayer-icon aplayer-icon-play">
+                </button>
+                <button type="button" class="aplayer-icon aplayer-icon-play" title="Play or pause" aria-label="Play or pause">
                     {{@ icons.play }}
-                </span>
-                <span class="aplayer-icon aplayer-icon-forward">
+                </button>
+                <button type="button" class="aplayer-icon aplayer-icon-forward" title="Next" aria-label="Next">
                     {{@ icons.skip }}
-                </span>
+                </button>
                 <div class="aplayer-volume-wrap">
                     <button type="button" class="aplayer-icon aplayer-icon-volume-down">
                         {{@ icons.volumeDown }}
@@ -130,10 +130,10 @@
                 <button type="button" class="aplayer-icon aplayer-icon-loop">
                     {{ if options.loop === 'one' }}{{@ icons.loopOne }}{{ else if options.loop === 'all' }}{{@ icons.loopAll }}{{ else if options.loop === 'none' }}{{@ icons.loopNone }}{{ /if }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-icon-menu">
+                <button type="button" class="aplayer-icon aplayer-icon-menu" title="Tracks" aria-label="Tracks" aria-haspopup="true" aria-expanded="{{ if options.listFolded }}false{{ else }}true{{ /if }}">
                     {{@ icons.menu }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="Playlist">
+                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="Playlists" aria-label="Playlists" aria-haspopup="menu" aria-expanded="false">
                     {{@ icons.playlist }}
                 </button>
                 <button type="button" class="aplayer-icon aplayer-icon-lrc">
