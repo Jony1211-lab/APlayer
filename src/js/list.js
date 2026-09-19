@@ -1,6 +1,5 @@
 import tplListItem from '../template/list-item.art';
 import utils from './utils';
-import smoothScroll from 'smoothscroll';
 
 class List {
     constructor(player) {
@@ -163,9 +162,24 @@ class List {
             if (light) {
                 light.classList.remove('aplayer-list-light');
             }
-            this.player.container.querySelectorAll('.aplayer-list li')[this.index].classList.add('aplayer-list-light');
+            const list = this.player.template.list;
+            const current = this.player.container.querySelectorAll('.aplayer-list li')[this.index];
+            current.classList.add('aplayer-list-light');
 
-            smoothScroll(this.index * 33, 500, null, this.player.template.list);
+            // Only move the list when the new track is outside the viewport. The old
+            // timed animation kept writing scrollTop after a wheel gesture and pulled
+            // the list back under the user's pointer.
+            if (this.showing && list.clientHeight > 0) {
+                const viewTop = list.scrollTop;
+                const viewBottom = viewTop + list.clientHeight;
+                const itemTop = current.offsetTop;
+                const itemBottom = itemTop + current.offsetHeight;
+                if (itemTop < viewTop || itemBottom > viewBottom) {
+                    const top = itemTop < viewTop ? itemTop : itemBottom - list.clientHeight;
+                    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+                    list.scrollTo({ top, behavior });
+                }
+            }
 
             this.player.setAudio(audio);
 

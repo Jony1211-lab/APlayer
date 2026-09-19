@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const { GitRevisionPlugin } = require('git-revision-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const gitRevisionPlugin = new GitRevisionPlugin();
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -25,21 +25,23 @@ module.exports = {
                     sourceMap: true,
                     ecma: 2015,
                     module: true,
-                    toplevel: true
-                },extractComments:false
-            })
-        ]
+                    toplevel: true,
+                },
+                extractComments: false,
+            }),
+        ],
     },
     output: {
         path: path.resolve(__dirname, '..', 'dist'),
         filename: '[name].min.js',
         library: {
             type: 'module',
-        },chunkFormat:"module",
+        },
+        chunkFormat: 'module',
         publicPath: '/',
     },
     experiments: {
-        outputModule: true
+        outputModule: true,
     },
     resolve: {
         modules: ['node_modules'],
@@ -56,7 +58,7 @@ module.exports = {
                         loader: 'babel-loader',
                         options: {
                             cacheDirectory: true,
-                            presets: [['@babel/preset-env', { corejs: "3.8", useBuiltIns: "entry" }]],
+                            presets: [['@babel/preset-env', { corejs: '3.8', useBuiltIns: 'entry' }]],
                         },
                     },
                 ],
@@ -76,7 +78,7 @@ module.exports = {
                         options: {
                             postcssOptions: {
                                 plugins: [autoprefixer, cssnano],
-                            }
+                            },
                         },
                     },
                     'sass-loader',
@@ -96,9 +98,9 @@ module.exports = {
             {
                 test: /\.art$/,
                 loader: 'art-template-loader',
-                options:{
-                    minimize:true,
-                }
+                options: {
+                    minimize: true,
+                },
             },
         ],
     },
@@ -107,7 +109,7 @@ module.exports = {
         new webpack.DefinePlugin({
             APLAYER_VERSION: `"${require('../package.json').version}"`,
             GIT_HASH: JSON.stringify(gitRevisionPlugin.version()),
-        }), new MiniCssExtractPlugin({filename:"[name].min.css"})
-
+        }),
+        new MiniCssExtractPlugin({ filename: '[name].min.css' }),
     ],
 };

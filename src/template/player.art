@@ -26,13 +26,13 @@
                 <span class="aplayer-time-inner">
                     <span class="aplayer-ptime">00:00</span> / <span class="aplayer-dtime">00:00</span>
                 </span>
-                <button type="button" class="aplayer-icon aplayer-icon-back" title="Previous" aria-label="Previous">
+                <button type="button" class="aplayer-icon aplayer-icon-back" title="上一首" aria-label="上一首">
                     {{@ icons.skip }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-icon-play" title="Play or pause" aria-label="Play or pause">
+                <button type="button" class="aplayer-icon aplayer-icon-play" title="播放/暂停" aria-label="播放/暂停">
                     {{@ icons.play }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-icon-forward" title="Next" aria-label="Next">
+                <button type="button" class="aplayer-icon aplayer-icon-forward" title="下一首" aria-label="下一首">
                     {{@ icons.skip }}
                 </button>
                 <div class="aplayer-volume-wrap">
@@ -51,10 +51,10 @@
                 <button type="button" class="aplayer-icon aplayer-icon-loop">
                     {{ if options.loop === 'one' }}{{@ icons.loopOne }}{{ else if options.loop === 'all' }}{{@ icons.loopAll }}{{ else if options.loop === 'none' }}{{@ icons.loopNone }}{{ /if }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-icon-menu" title="Tracks" aria-label="Tracks" aria-haspopup="true" aria-expanded="{{ if options.listFolded }}false{{ else }}true{{ /if }}">
+                <button type="button" class="aplayer-icon aplayer-icon-menu" title="歌曲列表" aria-label="歌曲列表" aria-haspopup="true" aria-expanded="{{ if options.listFolded }}false{{ else }}true{{ /if }}">
                     {{@ icons.menu }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="Playlists" aria-label="Playlists" aria-haspopup="menu" aria-expanded="false">
+                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="歌单列表" aria-label="歌单列表" aria-haspopup="menu" aria-expanded="false">
                     {{@ icons.playlist }}
                 </button>
                 <button type="button" class="aplayer-icon aplayer-icon-lrc">
@@ -105,13 +105,13 @@
                 <span class="aplayer-time-inner">
                     <span class="aplayer-ptime">00:00</span> / <span class="aplayer-dtime">00:00</span>
                 </span>
-                <button type="button" class="aplayer-icon aplayer-icon-back" title="Previous" aria-label="Previous">
+                <button type="button" class="aplayer-icon aplayer-icon-back" title="上一首" aria-label="上一首">
                     {{@ icons.skip }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-icon-play" title="Play or pause" aria-label="Play or pause">
+                <button type="button" class="aplayer-icon aplayer-icon-play" title="播放/暂停" aria-label="播放/暂停">
                     {{@ icons.play }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-icon-forward" title="Next" aria-label="Next">
+                <button type="button" class="aplayer-icon aplayer-icon-forward" title="下一首" aria-label="下一首">
                     {{@ icons.skip }}
                 </button>
                 <div class="aplayer-volume-wrap">
@@ -130,10 +130,10 @@
                 <button type="button" class="aplayer-icon aplayer-icon-loop">
                     {{ if options.loop === 'one' }}{{@ icons.loopOne }}{{ else if options.loop === 'all' }}{{@ icons.loopAll }}{{ else if options.loop === 'none' }}{{@ icons.loopNone }}{{ /if }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-icon-menu" title="Tracks" aria-label="Tracks" aria-haspopup="true" aria-expanded="{{ if options.listFolded }}false{{ else }}true{{ /if }}">
+                <button type="button" class="aplayer-icon aplayer-icon-menu" title="歌曲列表" aria-label="歌曲列表" aria-haspopup="true" aria-expanded="{{ if options.listFolded }}false{{ else }}true{{ /if }}">
                     {{@ icons.menu }}
                 </button>
-                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="Playlists" aria-label="Playlists" aria-haspopup="menu" aria-expanded="false">
+                <button type="button" class="aplayer-icon aplayer-playlist-icon" title="歌单列表" aria-label="歌单列表" aria-haspopup="menu" aria-expanded="false">
                     {{@ icons.playlist }}
                 </button>
                 <button type="button" class="aplayer-icon aplayer-icon-lrc">

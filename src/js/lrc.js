@@ -29,7 +29,7 @@ class Lrc {
     }
 
     update(currentTime = this.player.audio.currentTime) {
-        if (this.index > this.current.length - 1 || currentTime < this.current[this.index][0] || (!this.current[this.index + 1] || currentTime >= this.current[this.index + 1][0])) {
+        if (this.index > this.current.length - 1 || currentTime < this.current[this.index][0] || !this.current[this.index + 1] || currentTime >= this.current[this.index + 1][0]) {
             for (let i = 0; i < this.current.length; i++) {
                 if (currentTime >= this.current[i][0] && (!this.current[i + 1] || currentTime < this.current[i + 1][0])) {
                     this.index = i;
@@ -96,7 +96,7 @@ class Lrc {
     parse(lrc_s) {
         if (lrc_s) {
             if (lrc_s.startsWith('"') && lrc_s.endsWith('"')) {
-                lrc_s = JSON.parse(lrc_s)
+                lrc_s = JSON.parse(lrc_s);
             }
             lrc_s = lrc_s.replace(/([^\]^\n])\[/g, (match, p1) => p1 + '\n[');
             const lyric = lrc_s.split('\n');
